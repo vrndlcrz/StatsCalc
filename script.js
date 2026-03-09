@@ -41,17 +41,29 @@ function calculateStatistics() {
 
     let frequency = {};
     let maxFreq = 0;
-    let mode;
+    let modes = [];
 
+    // Count frequency
     numbers.forEach(num => {
         frequency[num] = (frequency[num] || 0) + 1;
         if (frequency[num] > maxFreq) {
             maxFreq = frequency[num];
-            mode = num;
         }
     });
 
-    document.getElementById("modeResult").textContent = mode;
+    // Find all modes
+    for (let num in frequency) {
+        if (frequency[num] === maxFreq) {
+            modes.push(num);
+        }
+    }
+
+    // If every number appears once → No Mode
+    if (maxFreq === 1) {
+        document.getElementById("modeResult").textContent = "No Mode";
+    } else {
+        document.getElementById("modeResult").textContent = modes.join(", ");
+    }
 
     // Population Variance
 
