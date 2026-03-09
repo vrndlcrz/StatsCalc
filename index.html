@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Formulas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+    <h1>Statistics Calculator</h1>
+        <p class="dataHeader">Enter your data:</p>
+        <input type="text" id="dataInput" placeholder="e.g., 1, 2, 3, 4, 5">
+        <button onclick="calculateStatistics()" id="calculateButton">Calculate</button>
+        <div class="results">
+            <h2>RESULTS</h2><br>
+            <p class="header">Ascending Order: <span id="ascendingResult"></span></p>
+            <p class="header">Range: <span id="rangeResult"></span></p>
+            <p class="header">Mean: <span id="meanResult"></span></p>
+            <p class="header">Median: <span id="medianResult"></span></p>
+            <p class="header">Mode: <span id="modeResult"></span></p>
+            <p class="header">Population Variance: <span id="popVarianceResult"></span></p>
+            <p class="header">Sample Variance: <span id="sampleVarianceResult"></span></p>
+            <p class="header">Population Standard Deviation: <span id="popStdDevResult"></span></p>
+            <p class="header">Sample Standard Deviation: <span id="sampleStdDevResult"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
